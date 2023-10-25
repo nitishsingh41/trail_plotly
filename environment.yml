@@ -2,3 +2,4 @@ channles:
   - conda-forge
 dependencies:
   - python-kaleido
+  - plotly
