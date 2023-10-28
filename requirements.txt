@@ -1,3 +1,3 @@
-plotly
+plotly==5.18.0
 streamlit
-kaleido
+kaleido==0.2.1
