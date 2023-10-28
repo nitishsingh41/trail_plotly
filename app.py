@@ -2,6 +2,11 @@ import streamlit as st
 import plotly.graph_objects as go
 import plotly.io as pio
 
+pio.kaleido.scope.chromium_args = (
+        "--headless",
+        "--no-sandbox",
+        "--single-process",
+        "--disable-gpu")
 # Create a sample Plotly figure
 fig = go.Figure(data=go.Scatter(x=[1, 2, 3, 4], y=[10, 11, 12, 13]))
 
