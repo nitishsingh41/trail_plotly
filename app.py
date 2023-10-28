@@ -15,7 +15,7 @@ fig = go.Figure(data=go.Scatter(x=[1, 2, 3, 4], y=[10, 11, 12, 13]))
 
 fig.show()
 output_filename = 'out.pdf'
-
+pio.write_image(fig, output_filename)
 # Use the save_as function to save the figure as an image
 with open('out.pdf', 'rb') as f:
  pdf_bytes = f.read()
