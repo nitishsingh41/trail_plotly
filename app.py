@@ -1,9 +1,9 @@
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.io as pio
-import conda.cli
+#import conda.cli
 
-conda.cli.main('conda', 'install',  '-c', 'conda-forge', 'python-kaleido')
+#conda.cli.main('conda', 'install',  '-c', 'conda-forge', 'python-kaleido')
 
 pio.kaleido.scope.chromium_args = (
         "--headless",
