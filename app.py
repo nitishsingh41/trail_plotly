@@ -14,15 +14,15 @@ import plotly.io as pio
 fig = go.Figure(data=go.Scatter(x=[1, 2, 3, 4], y=[10, 11, 12, 13]))
 
 fig.show()
-output_filename = 'output.pdf'
+output_filename = 'out.pdf'
 
 # Use the save_as function to save the figure as an image
-pio.write_image(fig, output_filename)
-st.write('output saved')
-with open("output.png", "rb") as file:
-    btn = st.download_button(
-            label="Download image",
-            data=file,
-            file_name="output.pdf",
-            mime="image/png"
-          )
+with open('out.pdf', 'rb') as f:
+ pdf_bytes = f.read()
+st.download_button(
+            label="Download PDF",
+            data=pdf_bytes,
+            key='pdf-download',
+            file_name='out.pdf',
+            mime='application/pdf'
+        )
